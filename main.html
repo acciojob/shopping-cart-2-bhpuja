@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-      <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    input {
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 10px;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h1>Shopping Cart</h1>
 
+  <!-- Input Fields -->
+  <div>
+    <label for="item-name-input">Item Name:</label>
+    <input type="text" id="item-name-input" placeholder="Enter item name" />
+  </div>
+  <div>
+    <label for="item-price-input">Price:</label>
+    <input type="number" id="item-price-input" placeholder="Enter item price" />
+  </div>
+  <button id="add-button">Add</button>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="shopping-list">
+      <!-- Initially, only the grand total row -->
+      <tr>
+        <td colspan="2" data-ns-test="grandTotal">0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
